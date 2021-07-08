@@ -1,7 +1,13 @@
-import logo from './logo.svg';
+import react,{useState} from 'react';
 
 export default function CharacterCard(props) {
+    const [active, setActive] = useState(false);
+    const activate = () => {
+    setActive(true)
+    }
+    const className = `card ${active ? 'activeCard': ''}`
     return (
-        <div className="card">{props.value}</div>
+    <div className={className} onClick={activate}>{props.value}</div>
     )
-}
+   
+   }
