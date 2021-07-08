@@ -1,5 +1,6 @@
 import CharacterCard from './CharacterCard';
 import logo from './logo.svg';
+
 export default function WordCard(props){
     return (
         <div>
