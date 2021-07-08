@@ -1,6 +1,6 @@
 import CharacterCard from './CharacterCard';
 import react,{useState} from 'react';
-import _ from 'lodash';
+import _, { attempt } from 'lodash';
 
 const prepareStateFromWord = (given_word) => {
     let word = given_word.toUpperCase()
@@ -34,7 +34,7 @@ export default function WordCard(props){
         <div>
             {
                 state.chars.map((c, i) => 
-                    <CharacterCard value={c} key={i} activationHandler={activationHandler}/>)
+                    <CharacterCard value={c} key={i} activationHandler={activationHandler} attempt={state.attempt}/>)
             }
         </div>
     )
